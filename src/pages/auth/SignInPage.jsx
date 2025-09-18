@@ -1,8 +1,23 @@
+import AuthForm from "./AuthForm";
+
 const SignInPage = () => {
-    return <div className="font-playfair text-blue-500">
-        sign in!
-        <i className='fa-solid fa-face-smile'></i>
+  return (
+    <div className="flex justify-center items-center">
+      <AuthForm
+        fields={[
+          {
+            label: "username",
+            type: "text",
+          },
+          {
+            label: "password",
+            type: "password",
+          },
+        ]}
+        submitButtonLabel="sign in"
+      />
     </div>
+  );
 };
 
 export default SignInPage;
